@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const toysRouter = require('./routes/toys');
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index'); // This is the correct import for the index.js router
 var usersRouter = require('./routes/users');
 const gridRouter = require('./routes/grid');
 const randomitemRouter = require('./routes/randomitem');
@@ -21,7 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// Define routes
+// app.use('/', indexRouter);
+app.use('/', indexRouter); // This handles the home route '/' and renders 'index.pug'
 app.use('/users', usersRouter);
 app.use('/toys', toysRouter);
 app.use('/', gridRouter);
