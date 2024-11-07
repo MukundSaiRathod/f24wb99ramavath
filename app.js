@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const gridRouter = require('./routes/grid');
 const randomitemRouter = require('./routes/randomitem');
-const searchResultsRouter = require('./routes/searchResults');  // Correct import for searchResultsRouter
+const searchResultsRouter = require('./routes/searchResults');  //Bonus
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use('/users', usersRouter);     // Users route
 app.use('/toys', toysRouter);       // Toys route
 app.use('/', gridRouter);           // Grid route
 app.use('/', randomitemRouter);     // Random item route
-app.use('/searchresults', searchResultsRouter);  // Correct usage of searchResultsRouter
+app.use('/searchresults', searchResultsRouter);  //  searchResultsRouter Bonus
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

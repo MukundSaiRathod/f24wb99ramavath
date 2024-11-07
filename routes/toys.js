@@ -10,7 +10,7 @@ const toys = [
 
 // Update the route to just '/' for the toys
 router.get('/', (req, res) => {
-    res.render('toys', { title: 'Toys', toys: toys });
+    res.render('toys', { title: 'SearchResults', toys: toys });
 });
 
 module.exports = router;
